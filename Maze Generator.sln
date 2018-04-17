@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maze Generator", "Maze Generator.csproj", "{A7F5E9F0-101F-98E1-2939-4093768AEA49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maze Generator.Editor", "Maze Generator.Editor.csproj", "{DDD4A96D-FF1E-95D0-C45E-91080C29DC2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7F5E9F0-101F-98E1-2939-4093768AEA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F5E9F0-101F-98E1-2939-4093768AEA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F5E9F0-101F-98E1-2939-4093768AEA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F5E9F0-101F-98E1-2939-4093768AEA49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD4A96D-FF1E-95D0-C45E-91080C29DC2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD4A96D-FF1E-95D0-C45E-91080C29DC2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD4A96D-FF1E-95D0-C45E-91080C29DC2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD4A96D-FF1E-95D0-C45E-91080C29DC2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
