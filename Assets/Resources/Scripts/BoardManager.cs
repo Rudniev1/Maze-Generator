@@ -14,7 +14,8 @@ public class BoardManager : MonoBehaviour {
     public GameObject floorTile;
     public GameObject[] obstacleTiles;
 
-    public Collider2D heCollide,toCollide;
+    public Collider2D heCollide;
+    Collider2D[] toCollide;
 
     Transform boardHolder;
     Transform wholeBoard;
@@ -40,8 +41,12 @@ public class BoardManager : MonoBehaviour {
         gridPositions1 = new Vector3[size,size];
         obstaclesCount = PlayerPrefs.GetInt("obstacles");
         wholeBoard = new GameObject("WholeBoard").transform;
+
         BoardSetup();
         InitialiseList();
+
+        toCollide = wholeBoard.GetComponentsInChildren<Collider2D>();
+
         layoutObjectRandom(obstacleTiles, obstaclesCount);
         layoutObjectRandom(new GameObject[] { start }, 1);
         layoutObjectRandom(new GameObject[] { meta }, 1);
@@ -64,7 +69,6 @@ public class BoardManager : MonoBehaviour {
 
     void BoardSetup()
     {
-      //  boardHolder = new GameObject("Board").transform;
         for (int x = 0; x < size+2; x++)
         {
             for (int y = 0; y < size+2; y++)
@@ -112,7 +116,7 @@ public class BoardManager : MonoBehaviour {
                 randomIndex = Random.Range(0, newGridPositions.Count);
                 randomPosition1 = newGridPositions[randomIndex];
             }
-            while (heCollide.IsTouching(toCollide));
+            while (heCollide.IsTouchingLayers());
                 GameObject instance = Instantiate(@object, randomPosition1, Quaternion.identity);
             instance.transform.SetParent(wholeBoard);
             gridPositions.Add(randomPosition1);
